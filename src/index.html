@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-slate-500">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="grid justify-center mx-auto m-3 max-w-lg">
+
+        <div
+            class="w-[30em] p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <form class="space-y-6" action="./pages/welcome.html" id="formData">
+                <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+                <div>
+                    <label for="fullnameValid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full
+                        Name</label>
+                    <input type="text" name="fullnameValid" id="fullnameValid" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500
+                            dark:hover:border-blue-700 dark:focus:ring-blue-800 dark:focus:outline-none"
+                        placeholder="Enter your Full Name" required>
+                    <div id="showValidUsername"
+                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 my-3">
+                        .</div>
+                </div>
+                <div>
+                    <label for="emailValid"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                    <input type="email" name="emailValid" id="emailValid" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500
+                            dark:hover:border-blue-700 dark:focus:ring-blue-800 dark:focus:outline-none"
+                        placeholder="Enter your Email" required>
+                </div>
+
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                    option</label>
+                <select id="countries"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                </select>
+
+                <div>
+                    <label for="passwordValid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                        passwordValid</label>
+                    <input type="password" name="passwordValid" id="passwordValid" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500
+                            dark:hover:border-blue-700 dark:focus:ring-blue-800 dark:focus:outline-none"
+                        required>
+                </div>
+                <div>
+                    <label for="confirmPasswordValid"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        confirm Password Valid</label>
+                    <input type="password" name="confirmPasswordValid" id="confirmPasswordValid" placeholder="••••••••"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500
+                            dark:hover:border-blue-700 dark:focus:ring-blue-800 dark:focus:outline-none"
+                        
+                        required>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="remember" type="checkbox" value=""
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                                required>
+                        </div>
+                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                            id="TermsValid">I accept terms</label>
+                    </div>
+
+                </div>
+                <button type="submit" onclick="submitDataForm()"
+                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
+                    to your account</button>
+                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                    Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create
+                        account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- <div class="grid justify-center mx-auto m-3 max-w-lg">
+
+            <div
+                class="w-[30em] p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                <form class="space-y-6" action="./pages/welcome.html" id="formDataCss">
+                    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform with css </h5>
+                    <div>
+                        <label for="FullnameValidCss" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full
+                            Name</label>
+                        <input type="text" name="FullnameValidCss" id="FullnameValidCss"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500
+                            dark:hover:border-blue-700 dark:focus:ring-blue-800"
+                            placeholder="Enter your Full Name" pattern="[A-Za-z]{3,}" required> 
+                            
+                    </div>
+                    <div>
+                        <label for="emailValidCss"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" name="emailValidCss" id="emailValidCss"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Enter your Email"
+                            pattern="[a-zA-Z0-9]{1,}@[a-zA-Z-.]{2,}[.]{1}[a-zA-Z]{2,}" required>
+                    </div>
+        
+                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+                        option</label>
+                    <select id="countriesCss"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Choose a country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                    </select>
+        
+                    <div>
+                        <label for="passwordValidCss" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                            passwordValid</label>
+                        <input type="password" name="passwordValidCss" id="passwordValidCss" placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters use special characters and numbers match the repeated password' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" required>
+                    </div>
+                    <div>
+                        <label for="confirmPasswordValidCss" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                            confirm Password Valid</label>
+                        <input type="password" name="confirmPasswordValidCss" id="confirmPasswordValidCss" placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" required>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="rememberCss" type="checkbox" value=""
+                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                                    required>
+                            </div>
+                            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I accept terms</label>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" onsubmit="submitDataFormCss()"
+                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
+                        to your account</button>
+                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                        Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+
+    <script src="main.js" async defer></script>
+</body>
+
+</html>
